@@ -25,11 +25,12 @@ NumberGrid::NumberGrid(QWidget *parent)
     : QWidget(parent)
 {
     setWindowTitle( tr( "Number Grid" ) ); // translate
-    setFixedSize( 400, 400 );
+    // setFixedSize( 400, 400 );
     _lcdNumber = new QLCDNumber();
     _gridLayout = new QGridLayout();
     _vBoxLayout = new QVBoxLayout();
     _sizeButton = new QPushButton();
+    _sizeButton->setText( "Resize grid" );
     _gridSizeDialog = new GridSizeDialog();
     _vBoxLayout->addWidget( _sizeButton );
     _vBoxLayout->addWidget( _lcdNumber );
